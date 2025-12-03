@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+if [ -z "$1" ]; then
+  echo "Usage: ./architect_cli.sh \"your goal\""
+  exit 1
+fi
+# Pass input directly to the baked-in model
+ollama run tcm:v0.1 "$1"
